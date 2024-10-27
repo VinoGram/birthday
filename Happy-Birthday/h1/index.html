@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>Happy Birthday, [Friend's Name]!</h1>
+        <p>We hope this day is filled with joy and surprises!</p>
+        
+        <audio id="birthdayJingle" autoplay>
+            <source src="path/to/your/happy_birthday_song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="image-gallery">
+            <img src="path/to/your/image1.jpg" alt="Birthday Image 1">
+            <img src="path/to/your/image2.jpg" alt="Birthday Image 2">
+            <img src="path/to/your/image3.jpg" alt="Birthday Image 3">
+            <!-- Add more images as desired -->
+        </div>
+
+        <div class="wish-form">
+            <h2>Make a Wish!</h2>
+            <textarea v-model="wish" placeholder="Write your birthday wish here..."></textarea>
+            <button @click="submitWish">Submit Wish</button>
+        </div>
+
+        <div class="meal-selection">
+            <button @click="goToMealCatalog">Choose Your Favorite Meal</button>
+        </div>
+    </div>
+</body>
+</html>
